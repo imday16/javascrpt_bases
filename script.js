@@ -517,11 +517,11 @@ document.write(calculTVA(450, 20) + '<br>');
 // Attribuer une fonction à une variable 
 
 // Déclaration de FUNCTION OPERATOR 
-//let maFonction = function(prenom,nom){
-//    console.log('Hello'+prenom+'+nom');
-//    console.log(calculTVA(100));
-//}
-//maFonction('nada','khatiri');
+let maFonction = function(prenom,nom){
+    console.log('Hello'+prenom+'+nom');
+    console.log(calculTVA(100));
+}
+maFonction('nada','khatiri');
 
 //Espace local et global
 let animal='loup';
