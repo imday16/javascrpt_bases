@@ -678,12 +678,12 @@ class Appartement extends Maison{
 }
 
 // Fabrication d'objets à partir du plan de fabrication : Maison
-//let maison1 = new Maison(5,120); // new permet d'instancier la classe et fabrique un objet
-//console.log(maison1.superficie + 'm²');
-//console.log(maison1.nbPieces);
-//console.log(maison1.couleurDesMurs);
-//maison1.repeindre('bleu'); // appelle la méthode repeindre
-//console.log(maison1.couleurDesMurs);
+let maison1 = new Maison(5,120); // new permet d'instancier la classe et fabrique un objet
+console.log(maison1.superficie + 'm²');
+console.log(maison1.nbPieces);
+console.log(maison1.couleurDesMurs);
+maison1.repeindre('bleu'); // appelle la méthode repeindre
+console.log(maison1.couleurDesMurs);
 
 let maison2 = new Maison(2,45,'beige');
 console.log(maison2.couleurDesMurs);
