@@ -650,24 +650,60 @@ for(let i in fruits){
  document.write(voiture.Demarrer());
 
 
- //Plan de fabrication (class)
- class Maison{
-     constructor(nbPieces, superficie, couleurDesMurs = 'blanc'){
-         // this désigne l'objet 'en cours'
-         this.nbPieces = nbPieces;
-         this.superficie = superficie;
-         this.couleurDesMurs = couleurDesMurs;
-         this.nbPortes = 10;
-     }
-     repeindre(nouvelleCouleur){
-         this.couleurDesMurs = nouvelleCouleur;
-     }
- }
+}
+// Plan de fabrication (class)
+class Maison{
 
- // Appartement hérite de Maison
- class Appartement extends Maison{
-     constructor(){
-         super(); // Super Constructor 
-         this.etage=2;
-     }
- }
+    constructor(nbPieces, superficie, couleurDesMurs = 'blanc'){
+        // this désigne l'objet 'en cours'
+        this.nbPieces = nbPieces;
+        this.superficie = superficie;
+        this.couleurDesMurs = couleurDesMurs;
+        this.nbPortes = 10;
+    }
+
+    repeindre(nouvelleCouleur){
+        this.couleurDesMurs = nouvelleCouleur;
+    }   
+
+}
+// Appartement hérite de Maison
+class Appartement extends Maison{
+    constructor(){
+       super(); // Super Constructor
+       this.etage=2;
+    }
+}
+
+// Fabrication d'objets à partir du plan de fabrication : Maison
+let maison1 = new Maison(5,120); // new permet d'instancier la classe et fabrique un objet
+console.log(maison1.superficie + 'm²');
+console.log(maison1.nbPieces);
+console.log(maison1.couleurDesMurs);
+maison1.repeindre('bleu'); // appelle la méthode repeindre
+console.log(maison1.couleurDesMurs);
+
+let maison2 = new Maison(2,45,'beige');
+console.log(maison2.couleurDesMurs);
+
+let appart1 = new Appartement(4,80);
+console.log(appart1);
+
+document.write('<hr>');
+let maDate = new Date();
+console.log(maDate.getDay()); // 0 dimanche - 6-samedi
+// 5 = vendredi
+console.log(maDate.getDate());
+// numéro du jour 1-31
+console.log(maDate.getMonth());
+
+// Tableaux de correspondance
+let jours = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+let mois = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+
+document.write(`Aujourd'hui nous sommes ${jours[maDate.getDay()]} ${maDate.getDate()} ${mois[maDate.getMonth()]} ${maDate.getFullYear()}<br>`);
+
+let autreDate= new Date('1914-04-14'); // format aaaa-mm-jj
+document.write(`Le Titanic a coulé le  ${jours[autreDate.getDay()]} ${autreDate.getDate()} ${mois[autreDate.getMonth()]} ${autreDate.getFullYear()}<br>`);
+
+document.write(maDate.toLocaleDateString()); // Format FR 04/03/2022
