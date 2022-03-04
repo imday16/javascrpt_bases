@@ -623,6 +623,51 @@ for(let i in fruits){
  document.write();
  for(let i in maraicher){
      for(let k in maraicher[i]){
-         document.write('<li>${maraicher[i][k]}</li>')
+         document.write('<li>${maraicher[i][k]}</li>');
+     }
+ }
+ document.write('</ul>');
+
+ // DOM Document Objet Model
+ // Ajax:Asynchronous JavaSript And XML
+
+
+ document.write('<h2>Les Objets</h2>');
+
+ let voiture = {
+     // Propriètés
+     "marque" : "Renault",
+     "modele" : "Clio",
+     "couleur" : "Rouge",
+     //méthodes
+     "Demarrer" : function(){
+         return "Je démarre";
+     }
+ };
+ console.log(voiture);
+ document.write(voiture.modele); //affiche Clio
+ document.write('<br>');
+ document.write(voiture.Demarrer());
+
+
+ //Plan de fabrication (class)
+ class Maison{
+     constructor(nbPieces, superficie, couleurDesMurs = 'blanc'){
+         // this désigne l'objet 'en cours'
+         this.nbPieces = nbPieces;
+         this.superficie = superficie;
+         this.couleurDesMurs = couleurDesMurs;
+         this.nbPortes = 10;
+     }
+     repeindre(nouvelleCouleur){
+         this.couleurDesMurs = nouvelleCouleur;
+     }
+ }
+
+ // Appartement hérite de Maison
+ class Appartement extends Maison{
+     constructor(){
+         super(); // Super Constructor 
+         this.etage=2;
      }
  }
