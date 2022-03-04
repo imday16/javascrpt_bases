@@ -517,11 +517,11 @@ document.write(calculTVA(450, 20) + '<br>');
 // Attribuer une fonction à une variable 
 
 // Déclaration de FUNCTION OPERATOR 
-let maFonction = function(prenom,nom){
-    console.log('Hello'+prenom+'+nom');
-    console.log(calculTVA(100));
-}
-maFonction('nada','khatiri');
+//let maFonction = function(prenom,nom){
+//    console.log('Hello'+prenom+'+nom');
+//    console.log(calculTVA(100));
+//}
+//maFonction('nada','khatiri');
 
 //Espace local et global
 let animal='loup';
@@ -559,10 +559,10 @@ console.log(fruits.includes('citron'));
 
 
 // Pour retirer un éléments 
-fruits.pop();
-console.log(fruits);
-fruits.push('pêche');
-console.log(fruits);
+//fruits.pop();
+//console.log(fruits);
+//fruits.push('pêche');
+//console.log(fruits);
 
 //fruits.splice(2,1); si on conné la position du fruit qu'on veut retirer de la liste ,ici deuxieme fruit et seulement de deuxieme 
 fruits.splice(fruits.indexOf('pomme'),1); //  si on conné pas l'index du fruit on utilise fruits.indexOf() , splice(position_depart,nb_éléments)
@@ -637,14 +637,14 @@ document.write('</ul>');
 
 document.write('<h2>Les objets (format JSON)</h2>');
 
-let voiture = {
+//let voiture = {
     // propriétés
-    "marque" : "Renault",
-    "modele" : "Clio",
-    "couleur" : "rouge",
-    // méthodes
-    "demarrer" : function(){
-        return "Je démarre";
+//    "marque" : "Renault",
+//    "modele" : "Clio",
+//    "couleur" : "rouge",
+//    // méthodes
+//    "demarrer" : function(){
+//        return "Je démarre";
     }
 };
 console.log(voiture);
@@ -678,12 +678,12 @@ class Appartement extends Maison{
 }
 
 // Fabrication d'objets à partir du plan de fabrication : Maison
-let maison1 = new Maison(5,120); // new permet d'instancier la classe et fabrique un objet
-console.log(maison1.superficie + 'm²');
-console.log(maison1.nbPieces);
-console.log(maison1.couleurDesMurs);
-maison1.repeindre('bleu'); // appelle la méthode repeindre
-console.log(maison1.couleurDesMurs);
+//let maison1 = new Maison(5,120); // new permet d'instancier la classe et fabrique un objet
+//console.log(maison1.superficie + 'm²');
+//console.log(maison1.nbPieces);
+//console.log(maison1.couleurDesMurs);
+//maison1.repeindre('bleu'); // appelle la méthode repeindre
+//console.log(maison1.couleurDesMurs);
 
 let maison2 = new Maison(2,45,'beige');
 console.log(maison2.couleurDesMurs);
