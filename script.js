@@ -637,14 +637,14 @@ document.write('</ul>');
 
 document.write('<h2>Les objets (format JSON)</h2>');
 
-//let voiture = {
+let voiture = {
     // propriétés
-//    "marque" : "Renault",
-//    "modele" : "Clio",
-//    "couleur" : "rouge",
-//    // méthodes
-//    "demarrer" : function(){
-//        return "Je démarre";
+    "marque" : "Renault",
+    "modele" : "Clio",
+    "couleur" : "rouge",
+    // méthodes
+    "demarrer" : function(){
+        return "Je démarre";
     }
 };
 console.log(voiture);
