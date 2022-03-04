@@ -586,71 +586,73 @@ for(let i=0; i < fruits.length ; i++){
 //fermeture de la balise ul 
 document.write('</ul>');
 
+
+
 // Tableaux multidimensionnels
 let maraicher=[
-    fruits,
-    legumes
-]
-console.log(maraicher); //pour voir ce que ça donne dans l'inspecter console
+    fruits, // 0
+    legumes // 1
+];
+console.log(maraicher);
 
 document.write(maraicher[1][1] + '<br>'); // aubergine
 document.write(maraicher[0][3] + '<br>');
 
-document.write(maraicher[1][1] + 'et' + maraicher[0][3] + '<br>');
+document.write(maraicher[1][1] + ' et ' + maraicher[0][3] +'<br>');
 document.write(`${maraicher[1][1]} et ${maraicher[0][3]}<br>`);
 
 document.write(maraicher + '<br>');
 
-//
 
+// parcourir le tableau maraicher et liste tous ses éléments
 document.write('<ul>');
-for(let i=0; i < maraicher.length; i++);
+for(let i=0; i < maraicher.length; i++) // tourne 2 fois
 {
- 
-    for(let k=0; k < maraicher[i].length; k++);{ //parcours fruits au premier tour 
 
-        document.write('<li>${maraicher[i][k]}</li>');
+
+    for(let k=0; k < maraicher[i].length; k++){ // parcoure fruits au premier tour, parcoure au légumes au deuxième tour
+        document.write(`<li>${maraicher[i][k]}</li>`);
     }
-
 }
 document.write('</ul>');
 
-//Boucle for/in
+// Boucle for/in
 for(let i in fruits){
-    document.write(i + '=>' + fruits[i] + '<br>');
+    document.write(i + ' => ' + fruits[i] + '<br>');
 }
- //Version avec for/in
- document.write();
- for(let i in maraicher){
-     for(let k in maraicher[i]){
-         document.write('<li>${maraicher[i][k]}</li>');
-     }
- }
- document.write('</ul>');
 
- // DOM Document Objet Model
- // Ajax:Asynchronous JavaSript And XML
-
-
- document.write('<h2>Les Objets</h2>');
-
- let voiture = {
-     // Propriètés
-     "marque" : "Renault",
-     "modele" : "Clio",
-     "couleur" : "Rouge",
-     //méthodes
-     "Demarrer" : function(){
-         return "Je démarre";
-     }
- };
- console.log(voiture);
- document.write(voiture.modele); //affiche Clio
- document.write('<br>');
- document.write(voiture.Demarrer());
-
-
+// Version avec for/in
+document.write('<ul>');
+for(let i in maraicher){
+    for(let k in maraicher[i]){
+        document.write(`<li>${maraicher[i][k]}</li>`);  
+    }
 }
+document.write('</ul>');
+
+
+// DOM Document Object Model 
+// Ajax: Asynchronous JavaScript And XML (json)
+// JSON : JavaScript Object Notation
+
+document.write('<h2>Les objets (format JSON)</h2>');
+
+let voiture = {
+    // propriétés
+    "marque" : "Renault",
+    "modele" : "Clio",
+    "couleur" : "rouge",
+    // méthodes
+    "demarrer" : function(){
+        return "Je démarre";
+    }
+};
+console.log(voiture);
+document.write(voiture.modele); // Affiche Clio
+document.write('<br>');
+document.write(voiture.demarrer());
+
+
 // Plan de fabrication (class)
 class Maison{
 
