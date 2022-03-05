@@ -19,3 +19,16 @@ switch (couleur){
     case`vert` : console.log(`vous aimez le vert`);break;
     default:console.log(`vous n'aimez aucune de nos couleurs (bleu, rouge, ver)`);
 }
+
+if(couleur == 'bleu'){
+    console.log=('vous aimez le bleu');
+}
+else if (couleur == 'rouge' || couleur== 'carmin'){
+    console.log('vous aimez le rouge');
+}
+else if (couleur == 'vert'){
+    console.log('vous aimez le vert');
+}
+else{
+    console.log('vous n\'aimez aucune de nos couleurs (bleu, rouge, vert)');
+}
