@@ -11,3 +11,11 @@ console.log(str);
 
 let chn =  `imad est capable`;
 console.log(chn); 
+let couleur;
+switch (couleur){
+    case 'bleu' :console.log(`vous aimez le  bleu`);break;
+    case `carmin`:
+    case `rouge`:console.log(`vous aimez le rouge`);break;
+    case`vert` : console.log(`vous aimez le vert`);break;
+    default:console.log(`vous n'aimez aucune de nos couleurs (bleu, rouge, ver)`);
+}
