@@ -5,7 +5,8 @@ nb1 = 0 +10;
 console.log(nb1);
 
 // Les chaines
-let nb = 999;
+
+let nb = 999 ;
 let str = `abc ${nb}`; 
 console.log(str);
 
@@ -32,3 +33,4 @@ else if (couleur == 'vert'){
 else{
     console.log('vous n\'aimez aucune de nos couleurs (bleu, rouge, vert)');
 }
+
